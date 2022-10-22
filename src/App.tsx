@@ -1,25 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{Fragment} from 'react'
+import Container from '@mui/material/Container'
+import Header from './components/layout/Header'
+import Home from './components/pages/Home';
+import About from './components/pages/About'
+import Cart  from './components/pages/Cart'
+import NotFound from './components/pages/NotFound'
 
-function App() {
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
+
+const  App = () => {
+
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   
+   <Router>
+     <Fragment>
+      <Header />
+    
+  <Container maxWidth="md">
+    <Routes>
+    
+      <Route path="/"    element={<Home />} />
+      
+      <Route path="/about" element={<About />} />
+      <Route path="/cart"  element={<Cart />} />
+      <Route path="*"     element={<NotFound />} />
+    </Routes>
+   </Container>
+  
+    </Fragment>
+   </Router>
+    
   );
 }
 
