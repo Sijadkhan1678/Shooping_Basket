@@ -5,15 +5,14 @@ import {useDispatch} from 'react-redux'
 import {Product} from '../../types/Types'
 
 
-
-const ProductItem:FC <any> = ({product}) => {
+const ProductItem:FC<any>  = ({product}) => {
   
   const {name,img,price,rating,brand} =product
   const dispatch = useDispatch()
-  const  addToBasket = (product:any) => {
+  const  addToBasket = (product:Product) => {
     dispatch(add({...product,quantity:1}))
   }
-  //const {addToCart} = useContext(context);
+  
   let shoeName = name.slice(0,14)
     return (
       

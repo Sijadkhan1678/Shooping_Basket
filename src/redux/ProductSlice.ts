@@ -1,7 +1,5 @@
-import {createSlice,configureStore}  from '@reduxjs/toolkit'
-import type {PayloadAction} from '@reduxjs/toolkit'
+import {createSlice}  from '@reduxjs/toolkit'
 import {Initial_State} from './State'
-import {State} from '../types/Types'
 import shoesList from './ShoesData'
 
 const productSlice = createSlice({

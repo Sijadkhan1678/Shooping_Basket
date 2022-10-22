@@ -6,7 +6,7 @@ import type {
 import {
   Initial_State,
 } from './State'
-import {Product} from '../types/Types'
+
 
 const basketSlice = createSlice({
   name: 'basket',

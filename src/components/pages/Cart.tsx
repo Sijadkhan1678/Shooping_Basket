@@ -1,9 +1,8 @@
-import React,{useContext} from 'react';
+import React from 'react';
 import {Typography,Box} from '@mui/material';
 import CartItem from '../CartItem';
 import {useSelector} from 'react-redux'
-import {Basket,State,Product} from '../../types/Types'
-
+import {Basket,State} from '../../types/Types'
 
 
 const Cart = () => {

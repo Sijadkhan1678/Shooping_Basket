@@ -1,6 +1,5 @@
 import React,{FC} from 'react';
 import {Box,Stack,Badge,IconButton} from '@mui/material'
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import basketIcon from './basket.png'
 import logo from './logo.jpg'
 import {NavLink} from 'react-router-dom'
@@ -29,14 +28,13 @@ const Header:FC = () => {
         <IconButton
               aria-label='cart' 
               size='large'
-            
               >
           <NavLink style={{color:'orange'}} to='/cart'>
            <Badge badgeContent={basket.length}
                   color='primary'>
                   
-         {/*   <ShoppingCartIcon  />*/} 
-         <img src={basketIcon} alt='basket' width='33' />
+         <img src={basketIcon} 
+              alt='basket' width='33' />
       
            </Badge>
            </NavLink>
@@ -47,7 +45,6 @@ const Header:FC = () => {
         </Box>
       
         )
-  
 }
 const style = ({isActive}:any) => {
  return { 

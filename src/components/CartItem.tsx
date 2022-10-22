@@ -4,7 +4,7 @@ import  DeleteIcon from '@mui/icons-material/Delete'
 import  AddIcon from '@mui/icons-material/AddCircle' 
 import  RemoveCircleIcon from '@mui/icons-material/RemoveCircle' 
 import {useDispatch} from 'react-redux'
-import {add,remove,increase,decrease} from '../redux/BasketSlice'
+import {remove,increase,decrease} from '../redux/BasketSlice'
 
 const CartItem:FC <any> = ({item}) => {
     const {id,name,img,price,quantity} = item

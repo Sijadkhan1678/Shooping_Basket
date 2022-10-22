@@ -13,6 +13,7 @@ const Products = () => {
    
    useEffect(()=>{
      getPrododucts()
+     // eslint-disable-next-line
    },[])
    
    const getPrododucts =  () => {
