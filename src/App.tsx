@@ -9,7 +9,6 @@ import NotFound from './components/pages/NotFound'
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 
 const  App = () => {
-
   
   return (
    
@@ -17,13 +16,13 @@ const  App = () => {
      <Fragment>
       <Header />
     
-  <Container maxWidth="md">
-    <Routes>
+    <Container maxWidth="md">
+      <Routes>
     
       <Route path="/"    element={<Home />} />
       
-      <Route path="/about" element={<About />} />
-      <Route path="/cart"  element={<Cart />} />
+      <Route path="about" element={<About />} />
+      <Route path="cart"  element={<Cart />} />
       <Route path="*"     element={<NotFound />} />
     </Routes>
    </Container>

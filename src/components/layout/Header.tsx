@@ -21,7 +21,7 @@ const Header:FC = () => {
              </Box>
              <Stack direction='row' spacing={3} width='50%' ml={4}>
              <NavLink to='/' style={style}>Home</NavLink>
-             <NavLink to='about' style={style}>About</NavLink>
+             <NavLink to='/about' style={style}>About</NavLink>
              </Stack>
              <Box width='13%' > 
 
@@ -47,6 +47,7 @@ const Header:FC = () => {
         )
 }
 const style = ({isActive}:any) => {
+  console.log('isactive',isActive)
  return { 
   fontWieght: '800px',
   fontSize: '1.3rem',

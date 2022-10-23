@@ -18,32 +18,24 @@ const Products = () => {
    
    const getPrododucts =  () => {
      
-     
-      dispatch(getProducts())
+     setTimeout( () => {
+     dispatch(getProducts())
       setLoading(false)
-    
+     }
+       ,5)
    }
 
     if(loading){ return <Loading />}
-     
-     
-   
-   
-   // const {products,brandProducts,selectedBrand} = useContext(context);
-      
-   // const Products = selectedBrand === 'All' || selectedBrand === 'Home' ? products : brandProducts
     
     return (
       
-    <Box width='100%' mt={5} >
+    <Box width='100%' mt={3.3} >
       <Grid container justifyContent='space-between' spacing={5}>
       
     { products.map( (product:Product,index:number) =>( 
               <ProductItem key={index}
-                 product={product} />
-          )
-          )
-    }
+                 product={product} /> )  
+                 ) }
       </Grid>
     </Box>
   
